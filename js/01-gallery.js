@@ -52,14 +52,14 @@ function escBtnHandler(e) {
   }
   else if (e.keyCode === 37 || e.keyCode === 38) {
     if(galleryIndex>0){
-
+        galleryIndex-=1;
         instance.element().querySelector('img').src = galleryItems[galleryIndex].original;
     }
   }
   else if (e.keyCode === 39 || e.keyCode === 40) {
 
     if(galleryIndex<galleryItems.length-1){
-
+        galleryIndex+=1;
         instance.element().querySelector('img').src = galleryItems[galleryIndex].original;
     }
   }
