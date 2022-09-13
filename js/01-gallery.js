@@ -35,11 +35,11 @@ const instance = basicLightbox.create(
   `,
   {
     onShow: () => {
-      console.log('start');
+
       document.addEventListener('keydown', escBtnHandler);
     },
     onClose: () => {
-      console.log('exit');
+
       document.removeEventListener('keydown', escBtnHandler);
     },
   }
@@ -47,19 +47,19 @@ const instance = basicLightbox.create(
 
 function escBtnHandler(e) {
   if (e.key === 'Escape') {
-    console.log("dsds");
+
     instance.close();
   }
   else if (e.keyCode === 37 || e.keyCode === 38) {
     if(galleryIndex>0){
-        console.log("next",galleryIndex-=1);
+
         instance.element().querySelector('img').src = galleryItems[galleryIndex].original;
     }
   }
   else if (e.keyCode === 39 || e.keyCode === 40) {
 
     if(galleryIndex<galleryItems.length-1){
-        console.log("back",galleryIndex+=1);
+
         instance.element().querySelector('img').src = galleryItems[galleryIndex].original;
     }
   }
