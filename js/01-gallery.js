@@ -21,7 +21,6 @@ let galleryIndex;
 function openInstanceModal(e) {
     e.preventDefault();
 
-    console.log(e)
     const selected = (element) => element.description == e.target.alt;
     galleryIndex=galleryItems.findIndex(selected);
 
